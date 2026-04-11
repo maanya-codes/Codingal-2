@@ -1,0 +1,25 @@
+import random
+class fquiz:
+    def __init__(self):
+        self.fruits = {"banana":"yellow",
+                       "watermelon":"green",
+                       "orange":"orange",
+                       "apple":"red"}
+        
+    def quiz(self):
+        print("Welcome to fruit quiz!")
+        while True:
+            fruit, color = random.choice(list(self.fruits.items()))
+            print("What is the color of ", fruit, "? :", end="")
+            ans = input()
+            if ans == color:
+                print("Wow! Correct!")
+            else:
+                print("Wrong!")
+            option = int(input("Enter 0 to continue.\nEnter 1 to exit.\nYour command: "))
+    
+            if option:
+                break
+
+x = fquiz()
+x.quiz()
