@@ -1,0 +1,43 @@
+class Student:
+    def __init__(self, marks):
+        self.marks = marks
+    def __add__(self, other):
+        return self.marks + other.marks
+
+s1 = Student(90)
+s2 = Student(80)
+
+print(s1 + s2)
+
+class Pizza:
+    def __init__(self, slices):
+        self.slices = slices
+    def __add__(self, other):
+        return self.slices + other.slices
+
+s1 = Pizza(4)
+s2 = Pizza(5)
+
+print(s1 + s2)
+
+
+class A:
+    def __init__(self, a):
+        self.a = a
+    def __lt__(self, other):
+        if (self.a < other.a):
+            return True
+        else:
+            return False
+    def __eq__(self, other):
+        if (self.a == other.a):
+            return True
+        else:
+            return False
+
+obj1 = A(2)
+obj2 = A(3)
+print("Is obj1 less than obj2?")
+print(obj1 < obj2)
+print("Is obj1 equal to obj2?")
+print(obj1 == obj2)
