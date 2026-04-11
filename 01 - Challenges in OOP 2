@@ -1,0 +1,23 @@
+class flashcard:
+    def __init__(self, word, meaning):
+        self.word = word
+        self.meaning = meaning
+    def __str__(self):
+        return (self.word + f"({self.meaning})")
+
+flash = []
+print("WELCOME TO MY FLASHCARD APPLICATION!")
+while True:
+    word = input("Enter a word: ")
+    meaning = input("Enter its meaning: ")
+
+    flash.append(flashcard(word, meaning))
+    option = int(input("Enter 0 to continue.\nEnter 1 to exit.\nYour command: "))
+    
+    if option:
+        break
+
+print("=== Your Flashcards ===")
+
+for i in flash:
+    print("  > " , i)
